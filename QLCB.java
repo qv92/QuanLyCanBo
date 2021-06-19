@@ -86,22 +86,21 @@ public class QLCB {
     }
     public static void searchCanBo(String name){
         for (int i = 0; i < list.size(); i++) {
-            if (list.get(i).getName()==name){
+            if (list.get(i).getName().equals(name)){
                 System.out.println(list.get(i));
             }else System.out.println("Không tìm thấy");
         }
     }
     public static void removeNhanVien(String name){
         for (int i = 0; i < list.size(); i++) {
-            if (list.get(i).getName()==name&&list.contains("NhanVien")){
+            if (list.get(i).getName().equals(name)){
                 list.remove(i);
             }
-            else System.out.println("Không tìm thấy");
         }
     }
     public static void editNhanVien(String name, String nameAfter){
         for (int i = 0; i < list.size(); i++) {
-            if (list.get(i).getName()== name && list.contains("NhanVien")){
+            if (list.get(i).getName().equals(name)){
                 list.get(i).setName(nameAfter);
             }
         }
@@ -111,7 +110,7 @@ public class QLCB {
     }
     public static void searchBranch(String branch){
         for (int i = 0; i < list.size(); i++) {
-            if (list.contains(branch)){
+            if (list.get(i).toString().contains(branch)){
                 System.out.println(list.get(i));
             }
         }
@@ -169,3 +168,4 @@ public class QLCB {
         }
     }
 }
+
