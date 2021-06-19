@@ -163,7 +163,7 @@ public class QLCB {
                     System.exit(0);
                 default:
                     System.out.println("Nhập không đúng");
-                    return;
+                    break;
             }
         }
     }
